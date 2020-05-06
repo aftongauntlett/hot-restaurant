@@ -11,6 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aftongauntlett/hot-restaurant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aftongauntlett/hot-restaurant/issues"
+  },
+  "homepage": "https://github.com/aftongauntlett/hot-restaurant#readme"
 }

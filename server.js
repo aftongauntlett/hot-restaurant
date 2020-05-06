@@ -4,7 +4,8 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.urlencoded({ extended: true}));
-app.use(epxress.json());
+app.use(express.json());
+app.use(express.static('assets'))
 
 //what routes do we need:
   //home page (GET)
@@ -22,6 +23,8 @@ const waitingList =[];
 
 app.get("/", function(req, res){
   // send back index.html file
+  res.sendFile(path.join(__dirname, "pages/index.html"));
+
 });
 
 app.get("/reservation", function(req, res){
@@ -41,5 +44,5 @@ app.post("/api/newreservation", function(req, res){
 })
 
 app.listen(PORT, function() {
-  console.log("App.port")
+  console.log("App listening on PORT " + PORT)
 })
