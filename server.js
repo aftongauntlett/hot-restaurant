@@ -5,7 +5,7 @@ const PORT = 3000;
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
-app.use(express.static('assets'))
+app.use(express.static('public'))
 
 //what routes do we need:
   //home page (GET)
@@ -27,12 +27,16 @@ app.get("/", function(req, res){
 
 });
 
-app.get("/reservation", function(req, res){
+app.get("/reservations", function(req, res){
   // send back the reservation request html file
+  res.sendFile(path.join(__dirname, "pages/reservations.html"));
+
 });
 
-app.get("/api/tables", function(req, res){
+app.get("/tables", function(req, res){
 //  send back json of all current tables reserved
+  res.sendFile(path.join(__dirname, "pages/tables.html"));
+
 });
 
 app.get("/api/waitinglist", function(req, res){
